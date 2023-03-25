@@ -1,27 +1,85 @@
 /* START: Task 1 Styles */
-table {
-    border-collapse: collapse;
+#task1{
+  border-collapse: collapse;
+  background-color: rgb(5, 219, 5);
+  width: 400px;
+height: 471px;
+}    
+td{
+  width: 100px;
+  height: 100px;
+  white-space: nowrap;
+  text-align:center;
+  font-weight: bold;
+  border: 3px solid;
+  vertical-align: center;
+  padding: 25px;
   }
-  
-  th,
-  td {
-    border: 1px solid black;
-    padding: 50px;
-    text-align: center;
+  #task1 .selected{
+  background-color: rgb(245, 245, 20);
   }
-  
-  th {
-    background-color: lightgray;
+  #task .special{
+      background-color: rgb(240, 240, 13);
   }
-  
-  .cell.special {
-    background-color: yellow;
+  #task .selected-row{
+     background-color: rgb(4, 142, 4);
   }
-  
 /* END: Task 1 Styles */
 
 /* START: Task 2 Styles */
+#task2 {
+  display: flex;
+  align-items: center;
+margin: auto;
+}
 
+input[type="text"] {
+  border: 1px solid rgb(9, 9, 9);
+  padding: 5px;
+  width: 300px;
+  height: 30px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+input[type="text"].invalid {
+  border: 2px solid rgb(240, 8, 47);
+  padding: 10px;
+}
+
+button {
+  margin-left: 10px;
+  width: 70px;
+  height: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+#notification {
+  position: absolute;
+  top: 500px;
+  border: 2px solid rgb(132, 131, 131);
+  font-weight: bold;
+  width: 400px;
+  height: 60px;
+  line-height: 50px;
+  
+}
+
+#notification.error {
+  background-color: rgb(248, 75, 104);
+  color: rgb(229, 224, 224);
+}
+
+#notification.success {
+  background-color: rgb(8, 159, 8);
+  color: white;
+}
 /* END: Task 2 Styles */
 
 /* START: Task 3 Styles */

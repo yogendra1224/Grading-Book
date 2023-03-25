@@ -1,1 +1,55 @@
 /* write your styles here */
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+body{
+    text-align: center;
+    }
+    
+    table{
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    text-align: center;
+    align-content: center;
+    margin: 15px auto;
+    }
+    
+    th{
+    color: white;
+    background-color: rgb(52, 155, 52);
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px 50px;
+      }
+    
+    td{
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 15px 20px;
+     }
+    
+    
+    tr:hover{
+    background-color:lightgray
+    }
+
+    span{
+        cursor: pointer;
+        color: yellow;
+    }
+    
+    img{
+        width: 50px;
+        height: 30px;
+    }
+
+    #language{
+        margin-left: 234px;
+    }
