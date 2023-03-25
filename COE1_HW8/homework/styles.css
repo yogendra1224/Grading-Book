@@ -1,0 +1,29 @@
+/* START: Task 1 Styles */
+table {
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border: 1px solid black;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: lightgray;
+  }
+  
+  .cell.special {
+    background-color: yellow;
+  }
+  
+/* END: Task 1 Styles */
+
+/* START: Task 2 Styles */
+
+/* END: Task 2 Styles */
+
+/* START: Task 3 Styles */
+
+/* END: Task 3 Styles */

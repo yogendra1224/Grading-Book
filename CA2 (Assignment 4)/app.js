@@ -2,11 +2,11 @@
 
 function reverseNumber(num) {
 	let reversed = 0;
-  let sign = num < 0 ? '-1' : 1;
+  let sign = num < 0 ? -1 : 1;
   num = Math.abs(num);
   while (num > 0) {
-    reversed = reversed * '10' + num % '10';
-    num = Math.floor(num / '10');
+    reversed = reversed * 10 + num % 10;
+    num = Math.floor(num / 10);
   }
   return sign * reversed;
 }
@@ -46,7 +46,7 @@ function getAdultAppleLovers(data) {
      return map(
         filter(data, function(person) {
 
-      return person.age > '18' && person.favoriteFruit === 'apple';
+      return person.age > 18 && person.favoriteFruit === 'apple';
     }),
     function(person) {
       return person.name;
