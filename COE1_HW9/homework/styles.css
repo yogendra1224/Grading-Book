@@ -1,0 +1,66 @@
+#modifyItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#root{
+    position: relative;
+}
+#alertMessage{
+    display: none;
+    position: absolute;
+    padding: 2rem;
+    background-color: rgb(189, 189, 189);
+    color: white;
+    font-size: large;
+}
+.listPage{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tweet{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.5rem;
+}
+.tweet div{
+    margin-right:2rem;
+}
+#navigationButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#navigationButtons button{
+    margin-right: 1rem;
+    margin-left:1rem;
+}
+button{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(144, 192, 255);
+    color:rgb(7, 0, 0);
+    margin:0.2rem;
+    font-weight: bold;
+}
+textarea{
+    height:7rem;
+    width: 15rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#editor{
+    cursor: pointer;
+}
+#likedTweets{
+    display: none;
+}
