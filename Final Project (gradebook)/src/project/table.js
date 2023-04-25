@@ -9,7 +9,7 @@ const Table = () => {
   const [originalData, setOriginalData] = useState(StudentData);
   const [searchText, setSearchText] = useState("");
   const [selectedRow, setSelectedRow] = useState(null);
-
+  const [showStats, setShowStats] = useState(false);
   const grades = StudentData.map((student) => student.examGrade);
   const maxGrade = Math.max(...grades);
   const minGrade = Math.min(...grades);
@@ -23,7 +23,6 @@ StudentData.forEach((student) => {
   }
 });
 
-// Count number of students with final grade in range 3-5
 let gradeRange4to5 = 0;
 StudentData.forEach((student) => {
   const finalGrade = 0.6 * student.examGrade + 0.4 * student.ratingGrade;
@@ -32,15 +31,10 @@ StudentData.forEach((student) => {
   }
 });
 
-// Update gradeCounts object
 const gradeCounts = {
   "3-4": gradeRange3to4,
   "4-5": gradeRange4to5,
 };
-
-  const handleDetailsClick = (student) => {
-    setSelectedStudent(student);
-  };
 
   const handleCloseModal = () => {
     setSelectedStudent(null);
@@ -49,7 +43,7 @@ const gradeCounts = {
   const handleFilter = (filter) => {
     setFilter(filter);
     setSortOrder("ascending");
-    setOriginalData(StudentData); // Reset original data when filter is changed
+    setOriginalData(StudentData); 
   };
 
   const handleSort = () => {
@@ -78,8 +72,6 @@ const gradeCounts = {
     setOriginalData(sortedData);
   };
   
-  
-
   const handleSearch = (event) => {
     const searchText = event.target.value;
     setSearchText(searchText);
@@ -112,6 +104,15 @@ const gradeCounts = {
     a.click();
   };
 
+  const handleDetailsClick = (student, index) => {
+    setSelectedStudent(student);
+    setSelectedRow(null);
+  };
+
+  const toggleStats = () => {
+    setShowStats(!showStats);
+  };
+
   return (
     <div className="table-container">
       <div className="filter-buttons">
@@ -140,34 +141,29 @@ const gradeCounts = {
         </thead>
 <tbody>
 {filteredData.map((student, index) => (
-  <tr
-  key={index}
-  onClick={() => {
-    setSelectedRow(index);
-  }}
-  className={selectedRow === index ? "selected-row" : ""}
->
-
-<td>{student.id}</td>
-<td className="name">{student.name}</td>
-<td>{student.ticketNumber}</td>
-<td>{student.ticketTopic}</td>
-<td>{student.examGrade}</td>
-<td>{student.ratingGrade}</td>
+    <tr key={student.id} onClick={() => setSelectedRow(index)} className={selectedRow === index ? "selected" : ""}>
+      <td>{student.id}</td>
+      <td className="stuName">{student.name}</td>
+      <td>{student.ticketNumber}</td>
+      <td>{student.ticketTopic}</td>
+      <td>{student.examGrade}</td>
+      <td>{student.ratingGrade}</td>
 <td id="finalGrade">{0.6 * student.examGrade + 0.4 * student.ratingGrade}</td>
 <td>{0.6 * student.examGrade + 0.4 * student.ratingGrade >= 4 ? "Pass" : "Fail"}</td>
 <td>{0.6 * student.examGrade + 0.4 * student.ratingGrade >= 4 ? "Great Effort!" : "Needs Improvement"}</td>
-<td><button className="details" onClick={() => handleDetailsClick(student)}>Details</button></td>
+<td><button className="details" onClick={(event) => {event.stopPropagation(); handleDetailsClick(student)}}>Details</button></td>
 </tr>
 ))}
 </tbody>
 </table>
-<footer></footer>
+<div className="filter-buttons">
+  <button className="showbutton" onClick={toggleStats}>{showStats ? "Hide statistics" : "Show statistics"}</button>
+</div>
 {selectedStudent && (
 <div className="modal-container">
 <div className="modal">
 <button className="close-btn" onClick={handleCloseModal}>X</button>
-<h2>Details of {selectedStudent.name}</h2><br></br>
+<h2>{selectedStudent.name}</h2><br></br>
 <p>ID: {selectedStudent.id}</p>
 <p>Ticket Number : {selectedStudent.ticketNumber}</p>
 <p>Ticket Topic : {selectedStudent.ticketTopic}</p>
@@ -177,8 +173,9 @@ const gradeCounts = {
           </div>
         </div>
       )}
-
+      
       <div>
+        {showStats && (
       <table border={1} className="statistics">
       <thead>
         <tr>
@@ -211,6 +208,8 @@ const gradeCounts = {
         </tr>
       </tbody>
     </table>
+        )}
+
       </div>
     </div>
   );

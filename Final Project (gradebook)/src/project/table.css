@@ -17,6 +17,7 @@ th, td{
 td{
     padding-left: 10px;
 }
+
 .selected-row {
     background-color: lightblue;
     text-transform: uppercase;;
@@ -34,6 +35,33 @@ th{
     border-radius: 10px;
     font-weight: bold;
     width: 90%;
+}
+
+.selected {
+    background-color: #538dfa;
+  }
+
+.selected .stuName{
+    text-transform: uppercase;
+}
+
+.showbutton{
+    background-color: rgb(92, 149, 253);
+    border: 1px solid lightgray;
+    font-weight: bold;
+    padding-block: 10px;
+    border-radius: 10px;
+    margin-block: 10px;
+    margin-left: 620px;
+}
+  
+.statistics td{
+    width: 300px;
+}
+
+.showbutton:hover{
+    background-color: black;
+    color: white;
 }
 
 .sort{
