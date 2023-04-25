@@ -78,45 +78,5 @@
         "ticketTopic": "Acting",
         "examGrade": 4,
         "ratingGrade": 3
-      },
-      {
-        "id": 11,
-        "name": "Chandler Bing",
-        "ticketNumber": "50979",
-        "ticketTopic": "Computers",
-        "examGrade": 5,
-        "ratingGrade": 4
-      },
-      {
-        "id": 12,
-        "name": "Phoebe Buffay",
-        "ticketNumber": "44006",
-        "ticketTopic": "Singing",
-        "examGrade": 2,
-        "ratingGrade": 5
-      },
-      {
-        "id": 13,
-        "name": "Ross Geller",
-        "ticketNumber": "34506",
-        "ticketTopic": "Palientology",
-        "examGrade": 3,
-        "ratingGrade": 4
-      },
-      {
-        "id": 14,
-        "name": "Monica Geller",
-        "ticketNumber": "33109",
-        "ticketTopic": "Cooking",
-        "examGrade": 3,
-        "ratingGrade": 3
-      },
-      {
-        "id": 15,
-        "name": "Roronoa Zoro",
-        "ticketNumber": "21095",
-        "ticketTopic": "Sports",
-        "examGrade": 5,
-        "ratingGrade": 4
       }
 ]

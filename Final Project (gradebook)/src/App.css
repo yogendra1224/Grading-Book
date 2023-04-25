@@ -45,7 +45,7 @@ span {
 }
 
 .footer{
-  background-image: linear-gradient( #007bff,white, #6c757d);
+  background-image: linear-gradient( #6c757d, white, yellow);
   padding-bottom: 10px;
   padding-top: 1px;
   font-size: 15px;
