@@ -8,7 +8,7 @@ function App() {
     <div className="App">
     <Home/>
     <Table/>
-    <footer className="footer"><p><FaCopyright/>EPAM Project</p><FaFacebook/> <FaInstagram/> <FaTwitter/> <FaWhatsapp/></footer>
+    <footer className="footer"><p><span><FaCopyright/></span><b>EPAM Project</b> <FaFacebook/> <FaInstagram/> <FaTwitter/> <FaWhatsapp/></p><p className='footername'><b>Designed by : Yogendra Reddy</b></p></footer>
     </div>
   );
 }
